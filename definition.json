@@ -1,0 +1,22 @@
+{
+  "name": "Hubspot",
+  "description": "Download CRM objects data from your Hubspot account.",
+  "instructions": "<ol><li>Create a Private App</li><ul><li>In your HubSpot account, click the <strong>settings icon</strong> in the main navigation bar.</li><li>In the left sidebar menu, navigate to <strong>Integrations > Private Apps</strong> and <strong>Click Create private app</strong>.</li><li>On the Basic Info tab, configure the details of your app.</li><li>On the Scopes tab, configure the scopes of your app.</li><ul><li>CRM</li><ul><li>All \"Read\" Scopes</li></ul><li>Standard</li><ul><li>e-commerce</li><li>tickets</li><li>sales-email-read</li></ul></ul><li>click <strong>Create App</strong> in the top right, and <strong>copy your app's access token</strong>.</li></ul><li><a href='https://developers.hubspot.com/docs/api/private-apps' target='_blank'>Learn More</a> about the Hubspot private app.</li><li>In Bytespree, provide the <strong>Access token</strong> of the Hubspot private app you just created</li><li>Finish database setup</li></ol>",
+  "known_limitations": [
+    "Hubspot Private app API calls are subject to a limit of 100 requests every 10 seconds and 250,000 requests per day."
+  ],
+  "use_tables": true,
+  "full_replace": true,
+  "use_hooks": false,
+  "logo_path": "logo.png",
+  "settings": [
+    {
+      "name": "access_token",
+      "friendly_name": "Access Token",
+      "description": "An Access Token issued by HubSpot Private App",
+      "is_secure": true,
+      "is_required": true,
+      "setting_type": "integration"
+    }
+  ]
+}
